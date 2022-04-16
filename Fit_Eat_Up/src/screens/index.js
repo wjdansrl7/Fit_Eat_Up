@@ -5,6 +5,11 @@ import Home from "./MainTab_screens/Home";
 import Search from "./MainTab_screens/Search";
 import Friend from "./MainTab_screens/Freind";
 import MyPage from "./MainTab_screens/Mypage";
+import Mypage from "./Screen/Mypage";
+import Personal from "./Screen/Personal";
+import Recommend from "./Screen/Recommend";
+import With from "./Screen/With";
+import Memo from "./Screen/Memo";
 
 
  
