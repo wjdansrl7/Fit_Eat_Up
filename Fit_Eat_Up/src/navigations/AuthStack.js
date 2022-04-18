@@ -11,6 +11,7 @@ const AuthStack = () => {
         <Stack.Navigator>
             <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
             <Stack.Screen name="Sign Up with Email" component={Signup} />
+
         </Stack.Navigator>
     );
 };
