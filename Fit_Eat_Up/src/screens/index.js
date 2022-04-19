@@ -1,4 +1,4 @@
-//tab navigation's screens
+//screen import 관리
 
 import Login from "./AuthStack_screens/Login";
 import Signup from "./AuthStack_screens/Signup";
