@@ -1,3 +1,4 @@
+//공통으로 사용할 색 정의
 const colors = {
     white: '#ffffff',
     black: '#000000',
@@ -14,8 +15,7 @@ export const theme = {
     label: colors.grey_1,
     inputPlaceholder: colors.grey_1,
     inputBorder: colors.grey_1,
-
-    buttonBackground: colors.blue,
-    buttonTitle: colors.white,
-    buttonUnfilledTitle:colors.blue,
+    headerTintColor: colors.black,
+    spinnerBackground: colors.black,
+    spinnerIndicator: colors.white,
 };
