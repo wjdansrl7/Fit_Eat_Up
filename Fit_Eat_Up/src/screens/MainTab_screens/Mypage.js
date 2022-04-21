@@ -12,7 +12,7 @@ const Container = styled.View`
     background-color: ${({ theme }) => theme.background};
 `;
 
-const MyPage = ({ navigation }) => {
+const Mypage = ({ navigation }) => {
     return (
         <Container>
             <Text style={{ fontSize: 20 }}>좋아요 누른 장소</Text>
@@ -29,4 +29,4 @@ const MyPage = ({ navigation }) => {
     );
 };
 
-export default MyPage;
+export default Mypage;
