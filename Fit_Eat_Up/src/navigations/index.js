@@ -9,7 +9,7 @@ import { NavigationContainer } from '@react-navigation/native';
 // import MainTab from "./MainTab";
 import AuthStack from './AuthStack';
 import { Spinner } from '../components';
-import { ProgressContext, UserContext } from '../contexts';
+import { ProgressContext } from '../contexts';
 //import MainStack from './Mainstack';
 
 const Navigation = () => {
