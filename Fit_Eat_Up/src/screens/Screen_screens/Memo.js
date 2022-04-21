@@ -1,7 +1,9 @@
+// Recommend에서 메모를 누르면 나오는 창
+
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
 import { Text, Button } from 'react-native';
-import { Input } from '../components';
+import { Input } from '../../components';
 
 const Container = styled.View`
     flex: 1;
@@ -11,13 +13,13 @@ const Container = styled.View`
 `;
 
 const Memo = () => {
-    const [Review, setReview] = useState('');
+    const [review, setReview] = useState('');
     return (
         <Container>
             <Text styled={{ fontSize: 20 }}>메모</Text>
             <Input
              label="Review"
-             value={nickname}
+             value={review}
              onChangeText={text => setReview(text)}
              onSubmitEditing={() => {}}
              placeholder="Review"
