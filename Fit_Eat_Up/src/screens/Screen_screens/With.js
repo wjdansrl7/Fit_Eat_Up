@@ -1,3 +1,5 @@
+// 친구와 함께 검색하는 창
+
 import React from 'react';
 import styled from 'styled-components/native';
 import { Text, Button } from 'react-native';
