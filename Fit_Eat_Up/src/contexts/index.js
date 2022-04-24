@@ -1,4 +1,4 @@
-// contexts 관리
+// context API 관리
 // 추후 필요하면 추가
 
 import { ProgressContext, ProgressProvider } from "./Progress";
