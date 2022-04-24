@@ -16,9 +16,13 @@ export const theme = {
     inputPlaceholder: colors.grey_1,
     inputBorder: colors.grey_1,
     headerTintColor: colors.black,
+
     spinnerBackground: colors.black,
     spinnerIndicator: colors.white,
+    
     buttonBackground: colors.blue,
     buttonTitle: colors.white,
     buttonUnfilledTitle:colors.blue,
+
+    buttonLogout: colors.red    //로그아웃 버튼을 빨간색으로 
 };

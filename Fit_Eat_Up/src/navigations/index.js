@@ -6,19 +6,19 @@ MainStack을 추가함
 
 import React, { useContext } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-// import MainTab from "./MainTab";
 import AuthStack from './AuthStack';
 import { Spinner } from '../components';
-import { ProgressContext } from '../contexts';
-//import MainStack from './Mainstack';
+import { ProgressContext, UserContext } from '../contexts';
+ import MainStack from './Mainstack';
 
 const Navigation = () => {
     const { inProgress } = useContext(ProgressContext);
-//    const { user } = useContext(UserContext);
+     const { user } = useContext(UserContext);
 
+     //user의 uid와 email이 존재하면 인증되어 MainStack 렌더링
     return (
         <NavigationContainer>
-            <AuthStack />
+            {user?.uid && user?.email? <MainStack /> : <AuthStack />}   
             {inProgress && <Spinner /> }
         </NavigationContainer>
     );

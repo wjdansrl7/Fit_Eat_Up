@@ -1,4 +1,4 @@
-// MyPage에서 개인정보 버튼 누르면 나오는 수정 창
+// MyPage에서 "개인정보 수정" 버튼 누르면 나오는 수정 창
 
 import React, { useState, useContext } from 'react';
 import styled from 'styled-components/native';
