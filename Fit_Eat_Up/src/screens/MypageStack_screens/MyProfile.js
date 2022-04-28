@@ -20,7 +20,6 @@ const MyProfile = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.contents}>
-                <Text style={{ fontSize: 30 }}>MyProfile</Text>
                 <Image />
             <Button 
              title="Profile Edit" 

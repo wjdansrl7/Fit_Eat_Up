@@ -3,5 +3,7 @@ import Input from "./Input";
 import Button from "./Button";
 import Image from "./Image";
 import Spinner from "./Spinner";
+import OXButton from "./OXButton";
+import SmallImage from "./SmallImage";
 
-export { Input, Button, Image,  Spinner };
+export { Input, Button, OXButton, Image, SmallImage, Spinner };
