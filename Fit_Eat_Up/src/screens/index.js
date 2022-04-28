@@ -1,15 +1,23 @@
 //screen import 관리
 
-import Login from "./AuthStack_screens/Login";
-import Signup from "./AuthStack_screens/Signup";
-import Home from "./MainTab_screens/Home";
-import Friend from "./MainTab_screens/Friend";
-import Mypage from "./MainTab_screens/Mypage";
-import Search from "./MainTab_screens/Search";
-import Memo from "./Screen_screens/Memo";
-import Personal from "./Screen_screens/Personal";
-import Recommend from "./Screen_screens/Recommend";
-import With from "./Screen_screens/With";
+import Login from './AuthStack_screens/Login';
+import Signup from './AuthStack_screens/Signup';
 
-export { Login, Signup, Home, Friend, Mypage, Search, 
-    Memo, Personal, Recommend, With };
+import Home from './HomeStack_screens/Home'
+import WithSearch from './HomeStack_screens/WithSearch'
+
+import Search from './SearchStack_screens/Search';
+import Result from './SearchStack_screens/Result';
+
+import MyFriend from './FriendStack_screens/MyFriend';
+import AddFriend from './FriendStack_screens/AddFriend';
+import FriendProfile from './FriendStack_screens/FriendProfile';
+
+import MyProfile from './MypageStack_screens/MyProfile';
+import ProfileEdit from './MypageStack_screens/ProfileEdit';
+
+export { Login, Signup, 
+        Home, WithSearch,
+        Search, Result,
+        MyFriend, AddFriend, FriendProfile,
+        MyProfile, ProfileEdit };

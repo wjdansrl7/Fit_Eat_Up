@@ -3,17 +3,20 @@
 
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home, Search, Friend, Mypage } from '../screens';
+import HomeStack from './HomeStack';
+import SearchStack from './SearchStack';
+import FriendStack from './FreindStack';
+import MypageStack from './MypageStack';
 
 const Tab = createBottomTabNavigator();
 
 const MainTab = () => {
     return (
-        <Tab.Navigator screenOptions={{ headerShown: false }}>
-            <Tab.Screen name="Home" component={Home} />
-            <Tab.Screen name="Search" component={Search} />
-            <Tab.Screen name="Friend" component={Friend} />
-            <Tab.Screen name="MyPage" component={Mypage} />
+        <Tab.Navigator screenOptions={{ headerShown: false}}>
+            <Tab.Screen name="HomeStack" component={HomeStack} />
+            <Tab.Screen name="SearchStack" component={SearchStack} />
+            <Tab.Screen name="FriendStack" component={FriendStack} />
+            <Tab.Screen name="MypageStack" component={MypageStack} />
         </Tab.Navigator>
     );
 };

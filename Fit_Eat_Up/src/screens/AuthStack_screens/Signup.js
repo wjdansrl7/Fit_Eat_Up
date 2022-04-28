@@ -3,19 +3,18 @@
 추후에 상의 후 변경예정*/
 import React, { useState, useRef, useContext } from 'react';
 import styled from 'styled-components/native';
-import { Text } from 'react-native';
-import { Input, Button } from '../../components';
+import { Input, Button, Image } from '../../components';
 import { signup } from '../../utils/firebase' //firebase.js에서 구현한 sinup 함수 import
 import { Alert } from 'react-native'     //회원가입 버튼 클릭시 알림창이 뜨게 하는 Alert
 import { ProgressContext, UserContext } from '../../contexts';
-
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 
 const Container = styled.View`
     flex: 1;
     background-color: ${({ theme }) => theme.background};
     align-items: center;
-    padding: 0 20px;
+    padding:40px 20px;
 `;
 
 const Signup = () => {
@@ -46,10 +45,12 @@ const Signup = () => {
     };
 
     return (
+        <KeyboardAwareScrollView
+            extraScrollHeight={20}>
         <Container>
-            <Text style={{ fontSize: 30 }}>Signup</Text>
+            <Image />
             <Input
-                label="Name"
+                label="NickName"
                 value={name}
                 onChangeText={text => setName(text)}
                 onSubmitEditing={() => {
@@ -57,11 +58,11 @@ const Signup = () => {
                     emailRef.current.focus()
                 }}
                 onBlur={() => setName(name.trim())}
-                placeholder="Name"
+                placeholder="NickName"
                 returnKeyType="next"
             />
             <Input
-                Ref={emailRef}
+                ref={emailRef}
                 label="Email"
                 value={email}
                 onChangeText={text => setEmail(text)}
@@ -85,12 +86,13 @@ const Signup = () => {
                 value={passwordConfirm}
                 onChangeText={text => setPasswordConfirm(text)}
                 onSubmitEditing={() =>_handleSignupButtonPress}
-                placeholder="Password"
+                placeholder="Password Confirm"
                 returnKeyType="done"
                 isPassword
             />
             <Button title="Signup" onPress={_handleSignupButtonPress} />
         </Container>
+        </KeyboardAwareScrollView>
     )
 };
 
