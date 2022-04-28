@@ -9,6 +9,7 @@ import { Text } from 'react-native';
 import { login } from '../../utils/firebase'; //firebase.js에서 구현한 login 함수 import
 import { Alert } from 'react-native'; //로그인 버튼 클릭 시 알림 창이 뜨게 하는 Alert
 import { ProgressContext, UserContext } from '../../contexts';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 
 
@@ -17,7 +18,7 @@ const Container = styled.View`
     justify-content: center;
     background-color: ${({ theme }) => theme.background};
     align-items: center;
-    padding: 20px;
+    padding: 0px 20px;
 `;
 
 
@@ -43,29 +44,33 @@ const Login = ({ navigation }) => {
     };
 
     return (
-        <Container>
-            <Text style={{ fontSize: 30 }}>Login</Text>
-            <Input
-                label="Email"
-                value={email}
-                onChangeText={text => setEmail(text)}
-                onSubmitEditing={() => passwordRef.current.focus()}
-                placeholder="Email"
-                returnKeyType="next"
-            />
-            <Input
-                ref={passwordRef}
-                label="Password"
-                value={password}
-                onChangeText={text => setPassword(text)}
-                onSubmitEditing={() => {}}
-                placeholder="Password"
-                returnKeyType="done"
-                isPassword  //비밀번호 입력시 입력되는 값이 보이지 않도록 설정
-            />
-            <Button title="Login" onPress={ handleLoginButtonPress } />
-            <Button title="signup" onPress={() => navigation.navigate("Signup")} isFilled={false} />
-        </Container>
+        <KeyboardAwareScrollView 
+            contentContainerStyle={{flex: 1}}
+            extraScrollHeight={20}>
+            <Container>
+                <Text style={{ fontSize: 30 }}>Login</Text>
+                <Input
+                    label="Email"
+                    value={email}
+                    onChangeText={text => setEmail(text)}
+                    onSubmitEditing={() => passwordRef.current.focus()}
+                    placeholder="Email"
+                    returnKeyType="next"
+                />
+                <Input
+                    ref={passwordRef}
+                    label="Password"
+                    value={password}
+                    onChangeText={text => setPassword(text)}
+                    onSubmitEditing={() => {}}
+                    placeholder="Password"
+                    returnKeyType="done"
+                    isPassword  //비밀번호 입력시 입력되는 값이 보이지 않도록 설정
+                />
+                <Button title="Login" onPress={ handleLoginButtonPress } />
+                <Button title="Signup" onPress={() => navigation.navigate("Signup")} isFilled={false} />
+            </Container>
+        </KeyboardAwareScrollView>
     )
 };
 

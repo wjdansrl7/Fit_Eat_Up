@@ -11,22 +11,16 @@ const Container = styled.View`
     background-color: ${({ theme }) => theme.background};
 `;
 
-const With = ({ navigation }) => {
+const WithSearch = () => {
     return (
         <Container>
             <Text style={{fontSize: 30}}>친구들과의 공통 맛집</Text>
             <Text style={{fontSize: 20}}>음식점 추천</Text>
-            <Button 
-             title='음식 사진' 
-             onPress={() => navigation.navigate('Recommend')}
-            />
+            <Button title='음식 사진' />
             <Text style={{fontSize: 20}}>카페 추천</Text>
-            <Button 
-             title='카페 사진' 
-             onPress={() => navigation.navigate('Recommend')}
-            />
+            <Button title='카페 사진' />
         </Container>
     );
 };
 
-export default With;
+export default WithSearch;
