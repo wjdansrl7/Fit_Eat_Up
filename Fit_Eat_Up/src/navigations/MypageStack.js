@@ -1,3 +1,4 @@
+//4 번째 탭 마이페이지(Mypage)의 스택 내비게이션
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { MyProfile, ProfileEdit } from '../screens';
