@@ -1,4 +1,3 @@
-//첫 번째 탭 홈(Home)의 스택 내비게이션
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Home, WithSearch } from '../screens';
