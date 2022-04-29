@@ -1,6 +1,5 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components/native';
-import { Text } from 'react-native';
 import { Image, Input, Button } from '../../components'; 
 
 const Container = styled.View`
@@ -10,18 +9,25 @@ const Container = styled.View`
     padding: 0px 20px;
 `;
 
-const ProfileEdit = () => {
+const Profileimage = styled.View`
+    margin: 30px;
+`;
+
+const ProfileEdit = ({ navigation}) => {
     const [nicknameEdit, setNicknameEdit] = useState('');
 
     return (
         <Container>
-            <Text style={{ fontSize: 30 }}>ProfileEdit</Text>
-            <Image />
+            <Profileimage>
+             <Image />
+            </Profileimage>
             <Input 
                 label="Nickname Edit"
                 value={nicknameEdit}
+                onChangeText={text => setNicknameEdit(text)}
+                onSubmitEditing={()=>{}}
                 placeholder="Nickname Edit"/>
-            <Button title="프로필 수정" />
+            <Button title="프로필 수정" onPress={() => navigation.navigate("MyProfile")} />
         </Container>
     );
 };
