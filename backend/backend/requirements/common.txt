@@ -1,0 +1,4 @@
+mysql
+mysqlclient
+pyinstaller
+pymysql
