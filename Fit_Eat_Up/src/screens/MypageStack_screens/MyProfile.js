@@ -1,15 +1,9 @@
 import React, { useContext} from 'react';
-import styled, { ThemeContext } from 'styled-components/native';
-import { Text, Button } from 'react-native';
+import { ThemeContext } from 'styled-components/native';
+import { StyleSheet, Text, Button, View } from 'react-native';
 import { logout } from '../../utils/firebase'   //firebase.js에서 구현한 logout 함수 import
 import { UserContext } from '../../contexts';
-
-const Container = styled.View`
-    flex: 1;
-    justify-content: center;
-    background-color: ${({ theme }) => theme.background};
-    align-items: center;
-`;
+import { Image } from '../../components';
 
 const MyProfile = ({ navigation }) => {
     const { dispatch } = useContext(UserContext);
@@ -24,16 +18,39 @@ const MyProfile = ({ navigation }) => {
         }
     };
     return (
-        <Container>
-            <Text style={{ fontSize: 30 }}>MyProfile</Text>
+        <View style={styles.container}>
+            <View style={styles.contents}>
+                <Image />
+            <Button 
+             title="Profile Edit" 
+             onPress={() => navigation.navigate("ProfileEdit")} 
+            />
+            <View style={styles.contents}>
             <Text tytle={{ fontSize:20}}>좋아요 누른 장소</Text>
+            </View>
+            <View style={styles.contents}>
             <Text tytle={{ fontSize:20}}>가본장소</Text>
-            <Button title="Profile Edit" onPress={() => navigation.navigate("ProfileEdit")} />
+            </View>
+            <View style={styles.contents}>
             <Button
              title="Logout" onPress={_handleLogoutButtonPress}
             />
-        </Container>
+            </View>
+            </View>
+        </View>
     )
 };
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'flex-start',
+    },
+    contents: {
+        flex: 1,
+        height: 150,
+        padding: 10,
+    },
+});
 
 export default MyProfile;

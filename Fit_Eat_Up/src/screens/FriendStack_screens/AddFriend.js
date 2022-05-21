@@ -12,17 +12,19 @@ const Container = styled.View`
 `;
 
 
-const AddFriend = () => {
+const AddFriend = ({ navigation }) => {
     const [FriendNickname, setFriendNickname] = useState('');
     return (
         <Container>
-            <Text style={{ fontSize: 30 }}>AddFriend</Text>
+            <Text style={{ fontSize: 20 }}>친구의 닉네임을 입력해주세요!</Text>
             <Input 
                 label="Input Friend Nickname"
                 value={FriendNickname}
+                onChangeText={text => setFriendNickname(text)}
+                onSubmitEditing={()=>{}}
                 placeholder="Freind Nickname" 
             />
-            <Button title="친구추가"/>
+            <Button title="친구추가" onPress={() => navigation.navigate("MyFriend")} />
         </Container>
     );
 };
