@@ -8,3 +8,4 @@ env.sh
 .env
 secrets.json
 .DS_Store
+my_settings.py
