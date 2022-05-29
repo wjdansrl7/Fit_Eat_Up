@@ -6,7 +6,6 @@ from user.models import Client, Review
 class ClientAdmin(admin.ModelAdmin):
     pass
 
-
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
     pass
