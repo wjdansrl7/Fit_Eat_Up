@@ -10,7 +10,7 @@ class Client(models.Model):
     intro = models.CharField(max_length=20, blank=True)
 
     def __str__(self):
-        return self.email
+        return self.Client_email
         
 class Review(models.Model):
     Review_id = models.IntegerField(primary_key=True)
