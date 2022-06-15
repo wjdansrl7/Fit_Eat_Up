@@ -18,7 +18,8 @@ const Navigation = () => {
      //user의 uid와 email이 존재하면 인증되어 MainStack 렌더링
     return (
         <NavigationContainer>
-            {user?.uid && user?.email? <MainStack /> : <AuthStack />}   
+            <MainStack />
+            {/* {user?.uid && user?.email? <MainStack /> : <AuthStack />}    */}
             {inProgress && <Spinner /> }
         </NavigationContainer>
     );

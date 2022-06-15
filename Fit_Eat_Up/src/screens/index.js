@@ -16,8 +16,11 @@ import FriendProfile from './FriendStack_screens/FriendProfile';
 import MyProfile from './MypageStack_screens/MyProfile';
 import ProfileEdit from './MypageStack_screens/ProfileEdit';
 
+import PlaceDetail from './PlaceDetail';
+
 export { Login, Signup, 
         Home, WithSearch,
         Search, Result,
         MyFriend, AddFriend, FriendProfile,
-        MyProfile, ProfileEdit };
+        MyProfile, ProfileEdit ,
+        PlaceDetail};
