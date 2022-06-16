@@ -1,9 +1,9 @@
 import React from 'react';
-import { Text, Button, StyleSheet, View, TouchableOpacity, Pressable } from 'react-native';
+import { Text, Button, StyleSheet, View, TouchableOpacity, Pressable, SafeAreaView } from 'react-native';
 
 const PlaceDetail = () => {
     return(
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <View style={styles.placename}>
                 <Text style={{fontSize: 20}}>음식점명</Text>
             </View>
@@ -13,7 +13,7 @@ const PlaceDetail = () => {
             <View style={styles.placedetails}>
                 <Text style={{fontSize: 20}}>음식점상세정보</Text>
             </View>
-        </View>
+        </SafeAreaView>
 
     );
 };

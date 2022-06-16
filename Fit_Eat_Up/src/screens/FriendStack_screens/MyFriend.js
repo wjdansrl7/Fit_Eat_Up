@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 import { StyleSheet, Text, Button, View } from 'react-native';
 import { OXButton, SmallImage } from '../../components';
 
-const Container = styled.View`
+const Container = styled.SafeAreaView`
     flex: 1;
     justify-content: center;
     background-color: ${({ theme }) => theme.background};
