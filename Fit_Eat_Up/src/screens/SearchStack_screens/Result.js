@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import { StyleSheet, View, Text } from 'react-native'
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 const Container = styled.View`
     flex: 1;
@@ -9,18 +9,20 @@ const Container = styled.View`
     align-items: center;
 `;
 
-const Result = () => {
+const Result = ({ navigation }) => {
     return (
         <KeyboardAwareScrollView extraScrollHeight={20}>
             <Container>
-                <View style={styles.searchname}>
-                    <Text style={styles.title}>검색어명</Text>
-                </View>
+                    <View style={styles.searchname}>
+                        <Text style={styles.title}>검색어명</Text>
+                    </View>
                 <View style={styles.searchlist}>
                     <View style={styles.onelistline}>
-                        <View style={styles.box}>
-                            <Text style={styles.title}>음식점1</Text>
-                        </View>
+                        <TouchableOpacity onPress={() => navigation.navigate("PlaceDetail")} >
+                            <View style={styles.box}>
+                                <Text style={styles.title}>음식점1</Text>
+                            </View>
+                        </TouchableOpacity>
                         <View style={styles.box}>
                             <Text style={styles.title}>음식점2</Text>
                         </View>
