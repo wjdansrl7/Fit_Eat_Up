@@ -5,7 +5,7 @@ import styled from 'styled-components/native';
 import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
-const Container = styled.View`
+const Container = styled.SafeAreaView`
     flex: 1;
     background-color: ${({ theme }) => theme.background};
 `;

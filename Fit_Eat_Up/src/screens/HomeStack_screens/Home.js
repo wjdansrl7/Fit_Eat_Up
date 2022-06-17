@@ -1,13 +1,19 @@
 import React from 'react';
 // import styled from 'styled-components/native';
-import { Text, Button, StyleSheet, View, TouchableOpacity, Pressable } from 'react-native';
+import { Text, 
+        StyleSheet, 
+        View, 
+        TouchableOpacity, 
+        Pressable,
+        SafeAreaView
+        } from 'react-native';
 // import { SmallImage } from '../../components';
 import { MaterialIcons } from '@expo/vector-icons';    //돋보기 이모티콘
 
 
 const Home = ({ navigation }) => {
     return(
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <View style={{flex:0.05}} />
             <View style={styles.recomtitle}>
                 <Text style={{fontSize:23, margin:5}}>친구들과의 공통 추천맛집 검색</Text>
@@ -36,7 +42,7 @@ const Home = ({ navigation }) => {
                 </View>
             </View>
             <View style={{flex:0.05}} />
-        </View>
+        </SafeAreaView>
     );
 };
 
@@ -60,7 +66,7 @@ const styles = StyleSheet.create({
         marginBottom: 25,
         marginHorizontal: 25,
         borderRadius: 10,
-        // flexDirection: 'row',
+        alignItems: 'flex-end',
     },
     // recombtnArea: {
     //     width:60,
@@ -75,7 +81,7 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         borderWidth: 4,
         borderRadius: 5,
-        left:278,
+        left: 4,
         top: -4,
     },
     oxArea: {   //ox영역    
