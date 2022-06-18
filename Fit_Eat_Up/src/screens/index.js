@@ -15,6 +15,8 @@ import FriendProfile from './FriendStack_screens/FriendProfile';
 
 import MyProfile from './MypageStack_screens/MyProfile';
 import ProfileEdit from './MypageStack_screens/ProfileEdit';
+import GoodList from './MypageStack_screens/GoodList';
+import VisitList from './MypageStack_screens/VisitList';
 
 import PlaceDetail from './PlaceDetail';
 
@@ -22,5 +24,5 @@ export { Login, Signup,
         Home, WithSearch,
         Search, Result,
         MyFriend, AddFriend, FriendProfile,
-        MyProfile, ProfileEdit ,
+        MyProfile, ProfileEdit, GoodList, VisitList,
         PlaceDetail};

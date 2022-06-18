@@ -51,10 +51,6 @@ const Result = ({ navigation }) => {
                             <Text style={styles.title}>음식점8</Text>
                         </View>
                     </View>
-                    <View style={styles.onelistline}>
-                        <View style={styles.box}></View>
-                        <View style={styles.box}></View>
-                    </View>
                 </View>
             </Container>
         </KeyboardAwareScrollView>
@@ -78,12 +74,10 @@ const styles = StyleSheet.create({
     searchlist: {
         width: 370,
         height: 800,
-        backgroundColor: '#CCE5FF',
     },
     onelistline: {
         width: 360,
         height: 170,
-        backgroundColor: '#FFCC99',
         margin: 5,
         flexDirection: 'row',
     },
