@@ -23,9 +23,11 @@ const Home = ({ navigation }) => {
                     <TouchableOpacity 
                         style={styles.recombtn}
                         onPress={() => navigation.navigate("WithSearch")}>
-                            <MaterialIcons name="search" size={55} color="black" />
+                            <MaterialIcons name="search" size={50} color="#0066cc" />
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.recombtn} />
+                    <TouchableOpacity style={styles.recombtn}>
+                        <MaterialIcons name="more-horiz" size={50} color="#0066cc" />
+                    </TouchableOpacity>
             </View>
 
             <View style={{alignItems:'center'}}>
@@ -34,10 +36,10 @@ const Home = ({ navigation }) => {
             <View style={styles.oxArea}>
                 <View style={styles.oxbtnArea}>
                     <TouchableOpacity style={styles.oxbtn} >
-                        <Text style={{fontSize:30, marginHorizontal: 50}}>O</Text>    
+                        <Text style={{fontSize:30, marginHorizontal: 50, color:'#0066cc'}}>O</Text>    
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.oxbtn}>
-                        <Text style={{fontSize:30, marginHorizontal: 50}}>X</Text>  
+                        <Text style={{fontSize:30, marginHorizontal: 50, color:'#0066cc'}}>X</Text>  
                     </TouchableOpacity>
                 </View>
             </View>
@@ -59,8 +61,8 @@ const styles = StyleSheet.create({
     },
     recomselect: { //recommend 본내용
         flex: 0.8,
-        backgroundColor: '#E0E0E0',
-        borderColor: 'black',
+        backgroundColor: '#CCE5FF',
+        borderColor: '#0066cc',
         borderWidth: 4,
         marginTop: 10,
         marginBottom: 25,
@@ -78,15 +80,17 @@ const styles = StyleSheet.create({
         width: 60,
         height: 70,
         backgroundColor: 'white',
-        borderColor: 'black',
+        borderColor: '#0066cc',
         borderWidth: 4,
         borderRadius: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
         left: 4,
         top: -4,
     },
     oxArea: {   //ox영역    
         flex:1.3,
-        backgroundColor: '#E0E0E0',
+        backgroundColor: '#CCE5FF',
         borderRadius: 10,
         marginBottom: 10,
         marginHorizontal: 60,
@@ -101,7 +105,7 @@ const styles = StyleSheet.create({
     oxbtn: {
         width: 136,
         height: 50,
-        borderColor: 'black',
+        borderColor: '#0066cc',
         borderWidth: 4,
     }
 });

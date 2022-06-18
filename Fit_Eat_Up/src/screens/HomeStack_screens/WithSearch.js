@@ -2,19 +2,20 @@
 
 import React from 'react';
 import styled from 'styled-components/native';
-import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import { Text, StyleSheet, View, TouchableOpacity, ScrollView } from 'react-native';
+// import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 const Container = styled.SafeAreaView`
     flex: 1;
     background-color: ${({ theme }) => theme.background};
+    align-items: center;
 `;
 
 const WithSearch = ({ navigation }) => {
     return (
-        <KeyboardAwareScrollView extraScrollHeight={20}>
+        <ScrollView>
             <Container>
-                <Text style={styles.title}>친구1 과의 공통맛집 추천</Text>
+                <Text style={styles.title}>친구1 과의 공통맛집 추천 결과입니다!</Text>
                     <View style={styles.resultlist}>
                         <View style={styles.box}>
                             <TouchableOpacity onPress={() => navigation.navigate("PlaceDetail")}>
@@ -52,7 +53,7 @@ const WithSearch = ({ navigation }) => {
                         </View>
                     </View>
             </Container>
-        </KeyboardAwareScrollView>
+        </ScrollView>
     );
 };
 
@@ -64,12 +65,12 @@ const styles = StyleSheet.create({
     resultlist: {
         width: 370,
         height: 800,
-        backgroundColor: '#CCE5FF',
+        // backgroundColor: '#CCE5FF',
     },
     percentagebox: {
         width: 300,
         height: 50,
-        backgroundColor: '#DCDCDC',
+        backgroundColor: '#CCE5FF',
         marginLeft: 10,
         marginRight: 10,
         marginBottom: 10,
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
         width: 360,
         height: 220,
         margin: 5,
-        backgroundColor: '#FFCC99',
+        // backgroundColor: '#FFCC99',
         alignItems: 'center',
     },
 })
